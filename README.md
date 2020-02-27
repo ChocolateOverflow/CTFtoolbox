@@ -51,7 +51,7 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 ---
 
-<a name="01"></a> ## 1. Information Gathering
+## <a name="01"></a> 1. Information Gathering
 
 <a name="01a"></a> ### a. Scanners
 
