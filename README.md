@@ -8,7 +8,7 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 ---
 
 01. [Information Gathering](#01)
-	- [Scanners](#01a)
+	- [Network Scanners](#01a)
 02. [Cryptography](#02)
 03. [Exploit](#03)
 04. [Forensics](#04)
@@ -53,11 +53,17 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 ## <a name="01"></a> 01. Information Gathering
 
-### <a name="01a"></a> Scanners
+### <a name="01a"></a> a. Network Scanners
 
-- nmap
+- [`nmap`](https://nmap.org/)
 
-- nikto
+- [`ipscan`](https://github.com/angryip/ipscan)
+
+- [`finalrecon`](https://github.com/thewhiteh4t/FinalRecon)
+
+### <a name="01b"></a> b. Vulnerability Scanners
+
+- [`nikto`](https://sectools.org/tool/nikto/)
 
 ---
 
@@ -75,11 +81,11 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 ### <a name="04a"></a> a. Binaries
 
-- binwalk
+- [`binwalk`](https://github.com/ReFirmLabs/binwalk)
 
-- foremost
+- [`foremost`](http://foremost.sourceforge.net/)
 
-- volatility
+- [`volatility`](https://github.com/volatilityfoundation/volatility)
 
 ### <a name="04b"></a> b. Images
 
@@ -107,25 +113,39 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 - [wireshark](https://www.wireshark.org/)
 
-- tcpflow
+- [`tcpflow`](https://linux.die.net/man/1/tcpflow)
 
-- tcpdump
+- `tcpdump`
 
 ---
 
 ## <a name="06"></a> 06. OSINT
 
+### <a name="06a></a> a. Online Lookup
+
+### <a name="06b></a> b. Social Network Enumeration
+
+- [sherlock](https://github.com/sherlock-project/sherlock)
+
+Check many websites for usernames
+
+- [theharvester](https://github.com/laramies/theHarvester)
+
+- [social-mapper](https://github.com/Greenwolf/social_mapper)
+
+Enumerate social networks with facial recognition
+
 ---
 
 ## <a name="07"></a> 07. Passwords
 
-- john
+- [`john`](https://github.com/magnumripper/JohnTheRipper)
 
-- hydra
+- [`hydra`](https://github.com/vanhauser-thc/thc-hydra)
 
-- pdfcrack
+- [`pdfcrack`](https://github.com/robins/pdfcrack)
 
-- fcrackzip
+- [`fcrackzip`](https://github.com/hyc/fcrackzip)
 
 ---
 
@@ -133,21 +153,23 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 ### <a name="08a"></a> a. File Recon
 
-- strings
+- `strings`
 
-- checksec
+- `checksec`
 
-- objdump
+- `objdump`
 
-- rabin2 -z
+- `rabin2 -z`
 
-- exiftool
+Like `strings` but only the `.data` section.
 
-extracts metadata
+- `exiftool`
+
+Extracts metadata.
 
 ### <a name="08b"></a> b. Debuggers
 
-- [gdb](https://en.wikipedia.org/wiki/GNU_Debugger)
+- [`gdb`](https://en.wikipedia.org/wiki/GNU_Debugger)
 
 - [peda](https://github.com/longld/peda)
 
@@ -161,11 +183,11 @@ An "upgrade" for gdb
 
 ### <a name="08d"></a> d. Hex
 
-- hexdump
+- `hexdump`
 
 ### <a name="08e"></a> e. Windows Executables
 
-- pefile
+- [pefile](https://github.com/erocarrera/pefile)
 
 ---
 
@@ -179,15 +201,15 @@ An "upgrade" for gdb
 
 - [stegsolve](http://www.caesum.com/handbook/Stegsolve.jar)
 
-uses several filters to help find stego
+Uses several filters to help find stego
 
 - [zstag](https://github.com/zed-0xff/zsteg)
 
-only works with PNG & BMP files
+Only works with PNG & BMP files
 
-- snow
+- [snow](https://github.com/mattkwan-zz/snow)
 
-uses whitespaces to hide data
+Uses whitespaces to hide data
 
 ### <a name="09b"></a> b. Audio
 
@@ -204,23 +226,20 @@ uses whitespaces to hide data
 ### <a name="10a"></a> a. Common Files and Directories
 
 - robots.txt
-
 - /admin/
-
 - /.git/
 
 ### <a name="10b"></a> b. Database
 
 - [sqlmap](https://github.com/sqlmapproject/sqlmap)
 
-
 ### <a name="10c"></a> c. Directory Traversal
 
-- dirb
+- [dirb](http://dirb.sourceforge.net/)
 
-- dirbuster
+- [dirbuster](https://sourceforge.net/projects/dirbuster/)
 
-- gobuster
+- [gobuster](https://github.com/OJ/gobuster)
 
 ### <a name="10d"></a> d. Proxies
 
@@ -234,13 +253,17 @@ uses whitespaces to hide data
 
 ### <a name="10f"></a> f. Wordpress
 
-- wpscan
+- [wpscan](https://wpscan.org/)
 
 ---
 
 ## <a name="11"></a> 11. Wireless
 
 ### <a name="11a"></a> a. Wi-Fi
+
+- [aircrack-ng](https://www.aircrack-ng.org/)
+
+- [airgeddon](https://github.com/v1s1t0r1sh3r3/airgeddon)
 
 ### <a name="11b"></a> b. Bluetooth
 
@@ -265,13 +288,18 @@ Powershell
 ### <a name="13a"></a> a. Esoteric Languages
 
 - https://tio.run/
+
 This online tool can run many esoteric languages
 
-- Brainfuck
+- [Brainfuck](https://esolangs.org/wiki/Brainfuck)
+
+Only uses the characters:
+
+` > < + - . , [ ] `
 
 - COW
 
-- Malboge
+- [Malboge](https://esolangs.org/wiki/Malbolge)
 
 - Ook!
 
@@ -279,10 +307,10 @@ This online tool can run many esoteric languages
 
 ### <a name="13b"></a> b. File Conversion
 
-- zbar
+- [zbar](https://github.com/ZBar/ZBar)
 
-scans and decodes QR
+Scans and decodes QR
 
-- festival
+- [festival](http://www.cstr.ed.ac.uk/projects/festival/)
 
-text-to-speech converter
+Text-to-speech converter
