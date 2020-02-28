@@ -111,7 +111,7 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 ### <a name="05b"></a> b. Packet Analysis
 
-- [wireshark](https://www.wireshark.org/)
+- [`wireshark`](https://www.wireshark.org/)
 
 - [`tcpflow`](https://linux.die.net/man/1/tcpflow)
 
@@ -121,9 +121,9 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 ## <a name="06"></a> 06. OSINT
 
-### <a name="06a></a> a. Online Lookup
+### <a name="06a"></a> a. Online Lookup
 
-### <a name="06b></a> b. Social Network Enumeration
+### <a name="06b"></a> b. Social Network Enumeration
 
 - [sherlock](https://github.com/sherlock-project/sherlock)
 
@@ -231,7 +231,7 @@ Uses whitespaces to hide data
 
 ### <a name="10b"></a> b. Database
 
-- [sqlmap](https://github.com/sqlmapproject/sqlmap)
+- [`sqlmap`](https://github.com/sqlmapproject/sqlmap)
 
 ### <a name="10c"></a> c. Directory Traversal
 
@@ -253,7 +253,7 @@ Uses whitespaces to hide data
 
 ### <a name="10f"></a> f. Wordpress
 
-- [wpscan](https://wpscan.org/)
+- [`wpscan`](https://wpscan.org/)
 
 ---
 
@@ -293,9 +293,7 @@ This online tool can run many esoteric languages
 
 - [Brainfuck](https://esolangs.org/wiki/Brainfuck)
 
-Only uses the characters:
-
-` > < + - . , [ ] `
+Only uses the characters: ` > < + - . , [ ] `
 
 - COW
 
