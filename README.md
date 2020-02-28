@@ -85,7 +85,7 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 ### <a name="04c"></a> c. PDF
 
-### <a name="04d"></a> ### d. APK
+### <a name="04d"></a>  d. APK
 
 - apktool
 
@@ -93,7 +93,7 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 ## <a name="05"></a> 05. Networking
 
-### <a name="05a"></a> Common Ports
+### <a name="05a"></a> a. Common Ports
 
 - 80 (http)
 
@@ -103,7 +103,7 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 - 1433 (Microsoft SQL Server)
 
-### <a name="05b"></a> Packet Analysis
+### <a name="05b"></a> b. Packet Analysis
 
 - [wireshark](https://www.wireshark.org/)
 
@@ -262,7 +262,7 @@ Powershell
 
 ## <a name="13"></a> 13. Misc
 
-### <a name="13a"></a> Esoteric Languages
+### <a name="13a"></a> a. Esoteric Languages
 
 - https://tio.run/
 This online tool can run many esoteric languages
@@ -277,7 +277,7 @@ This online tool can run many esoteric languages
 
 - Piet
 
-### <a name="13b"></a> File Conversion
+### <a name="13b"></a> b. File Conversion
 
 - zbar
 
