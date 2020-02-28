@@ -9,49 +9,49 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 01. [Information Gathering](#01)
 	- [Scanners](#01a)
-01. [Cryptography](#02)
-01. [Exploit](#03)
-01. [Forensics](#04)
-	- [APK](#04a)
-	- [Binary](#04b)
-	- [Images](#04c)
-	- [PDF](#04d)
-01. [Network](#05)
+02. [Cryptography](#02)
+03. [Exploit](#03)
+04. [Forensics](#04)
+	- [Binary](#04a)
+	- [Images](#04b)
+	- [PDF](#04c)
+	- [APK](#04d)
+05. [Network](#05)
 	- [Common Ports](#05a)
 	- [Packet Analysis](#05b)
-01. [OSINT](#06)
-01. [Passwords](#07)
-01. [Reverse Engineering/Binary Exploitation](#08)
-	- [Debugging](#08a)
-	- [Disassembly](#08b)
-	- [File Recon](#08c)
+06. [OSINT](#06)
+07. [Passwords](#07)
+08. [Reverse Engineering/Binary Exploitation](#08)
+	- [File Recon](#08a)
+	- [Debugging](#08b)
+	- [Disassembly](#08c)
 	- [Hex](#08d)
 	- [Windows Executables](#08e)
-01. [Steganography](#09)
-	- [Audio](#09a)
-	- [Images](#09b)
+09. [Steganography](#09)
+	- [Images](#09a)
+	- [Audio](#09b)
 	- [Others](#09c)
-01. [Web](#10)
+10. [Web](#10)
 	- [Common Files and Directories](#10a)
-	- [Directory Traversal](#10b)
-	- [Proxies](#10c)
-	- [SQL](#10d)
-	- [Wordpress](#10e)
-	- [XSS](#10f)
-01. [Wireless](#10)
-	- [Bluetooth](#11a)
-	- [RF](#11a)
-	- [Wi-Fi](#11c)
-01. [Post-exploitation](#12)
+	- [Database](#10b)
+	- [Directory Traversal](#10c)
+	- [Proxies](#10d)
+	- [XSS](#10e)
+	- [Wordpress](#10f)
+11. [Wireless](#10)
+	- [Wi-Fi](#11a)
+	- [Bluetooth](#11b)
+	- [RF](#11c)
+12. [Post-exploitation](#12)
 	- [Linux](#12a)
 	- [Windows](#12b)
-01. [Misc](#13)
+13. [Misc](#13)
 	- [Esoteric Languages](#13a)
 	- [File Conversion](#13b)
 
 ---
 
-## <a name="01"></a> Information Gathering
+## <a name="01"></a> 01. Information Gathering
 
 ### <a name="01a"></a> Scanners
 
@@ -61,23 +61,19 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 ---
 
-## <a name="02"></a> Cryptography
+## <a name="02"></a> 02. Cryptography
 
 - [cyberchef](https://gchq.github.io/CyberChef/)
 
 ---
 
-## <a name="03"></a> Exploit
+## <a name="03"></a> 03. Exploit
 
 ---
 
-## <a name="04"></a> Forensics
+## <a name="04"></a> 04. Forensics
 
-### <a name="04a"></a> APK
-
-- apktool
-
-### <a name="04b"></a> Binaries
+### <a name="04a"></a> a. Binaries
 
 - binwalk
 
@@ -85,13 +81,17 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 - volatility
 
-### <a name="04c"></a> Images
+### <a name="04b"></a> b. Images
 
-### <a name="04d"></a> PDF
+### <a name="04c"></a> c. PDF
+
+### <a name="04d"></a> ### d. APK
+
+- apktool
 
 ---
 
-## <a name="05"></a> Networking
+## <a name="05"></a> 05. Networking
 
 ### <a name="05a"></a> Common Ports
 
@@ -113,11 +113,11 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 ---
 
-## <a name="06"></a> OSINT
+## <a name="06"></a> 06. OSINT
 
 ---
 
-## <a name="07"></a> Passwords
+## <a name="07"></a> 07. Passwords
 
 - john
 
@@ -129,9 +129,9 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 ---
 
-## <a name="08"></a> Reverse Engineering/Binary Exploitation
+## <a name="08"></a> 08. Reverse Engineering/Binary Exploitation
 
-### <a name="08a"></a> File Recon
+### <a name="08a"></a> a. File Recon
 
 - strings
 
@@ -145,9 +145,7 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 extracts metadata
 
----
-
-### <a name="08b"></a> Debuggers
+### <a name="08b"></a> b. Debuggers
 
 - [gdb](https://en.wikipedia.org/wiki/GNU_Debugger)
 
@@ -155,31 +153,25 @@ extracts metadata
 
 An "upgrade" for gdb
 
----
-
-### <a name="08c"></a> Disassemblers
+### <a name="08c"></a> c. Disassemblers
 
 - [radare2](https://github.com/radareorg/radare2)
 
 - [Ghidra](https://ghidra-sre.org/)
 
----
-
-### <a name="08d"></a> Hex
+### <a name="08d"></a> d. Hex
 
 - hexdump
 
----
-
-### <a name="08e"></a> Windows Executables
+### <a name="08e"></a> e. Windows Executables
 
 - pefile
 
 ---
 
-## <a name="09"></a> Steganograhy
+## <a name="09"></a> 09. Steganograhy
 
-### <a name="09a"></a> Images
+### <a name="09a"></a> a. Images
 
 - [stegosuite](https://stegosuite.org/)
 
@@ -197,23 +189,19 @@ only works with PNG & BMP files
 
 uses whitespaces to hide data
 
----
-
-### <a name="09b"></a> Audio
+### <a name="09b"></a> b. Audio
 
 - [Audacity](https://www.audacityteam.org/download/linux/)
 
----
-
-### <a name="09c"></a> Others
+### <a name="09c"></a> c. Others
 
 - [steghide](http://steghide.sourceforge.net/)
 
 ---
 
-## <a name="10"></a> Web
+## <a name="10"></a> 10. Web
 
-### <a name="10a"></a> Common Files and Directories
+### <a name="10a"></a> a. Common Files and Directories
 
 - robots.txt
 
@@ -221,9 +209,12 @@ uses whitespaces to hide data
 
 - /.git/
 
----
+### <a name="10b"></a> b. Database
 
-### <a name="10b"></a> Directory Traversal
+- [sqlmap](https://github.com/sqlmapproject/sqlmap)
+
+
+### <a name="10c"></a> c. Directory Traversal
 
 - dirb
 
@@ -231,49 +222,37 @@ uses whitespaces to hide data
 
 - gobuster
 
----
-
-### <a name="10c"></a> Proxies
+### <a name="10d"></a> d. Proxies
 
 - [Burps Suite](https://portswigger.net/burp/communitydownload)
 
 - [zaproxy](https://github.com/zaproxy/zaproxy)
 
----
+### <a name="10e"></a> e. XSS
 
-### <a name="10d"></a> SQL
+- [xsstrike](https://github.com/UltimateHackers/XSStrike)
 
-- [sqlmap](https://github.com/sqlmapproject/sqlmap)
-
----
-
-### <a name="10e"></a> Wordpress
+### <a name="10f"></a> f. Wordpress
 
 - wpscan
 
 ---
 
-### <a name="10f"></a> XSS
+## <a name="11"></a> 11. Wireless
 
-- [xsstrike](https://github.com/UltimateHackers/XSStrike)
+### <a name="11a"></a> a. Wi-Fi
 
----
+### <a name="11b"></a> b. Bluetooth
 
-## <a name="11"></a> Wireless
-
-### <a name="11a"></a> Bluetooth
-
-### <a name="11b"></a> RF
-
-### <a name="11c"></a> Wi-Fi
+### <a name="11c"></a> c. RF
 
 ---
 
-## <a name="12"></a> Post-exploitation
+## <a name="12"></a> 12. Post-exploitation
 
-### <a name="12a"></a> Linux
+### <a name="12a"></a> a. Linux
 
-### <a name="12b"></a> Windows
+### <a name="12b"></a> b. Windows
 
 Powershell
 
@@ -281,7 +260,7 @@ Powershell
 
 ---
 
-## <a name="13"></a> Misc
+## <a name="13"></a> 13. Misc
 
 ### <a name="13a"></a> Esoteric Languages
 
