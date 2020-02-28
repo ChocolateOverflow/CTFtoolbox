@@ -9,6 +9,7 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 01. [Information Gathering](#01)
 	- [Network Scanners](#01a)
+	- [Vulnerability Scanners](#01b)
 02. [Cryptography](#02)
 03. [Exploit](#03)
 04. [Forensics](#04)
@@ -20,6 +21,8 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 	- [Common Ports](#05a)
 	- [Packet Analysis](#05b)
 06. [OSINT](#06)
+	- [Online Lookup](#06a)
+	- [Social Network Enumeration](#06b)
 07. [Passwords](#07)
 08. [Reverse Engineering/Binary Exploitation](#08)
 	- [File Recon](#08a)
@@ -79,7 +82,7 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 ## <a name="04"></a> 04. Forensics
 
-### <a name="04a"></a> a. Binaries
+### <a name="04a"></a> a. Binary
 
 - [`binwalk`](https://github.com/ReFirmLabs/binwalk)
 
@@ -167,7 +170,7 @@ Like `strings` but only the `.data` section.
 
 Extracts metadata.
 
-### <a name="08b"></a> b. Debuggers
+### <a name="08b"></a> b. Debugging
 
 - [`gdb`](https://en.wikipedia.org/wiki/GNU_Debugger)
 
@@ -175,7 +178,7 @@ Extracts metadata.
 
 An "upgrade" for gdb
 
-### <a name="08c"></a> c. Disassemblers
+### <a name="08c"></a> c. Disassembly
 
 - [radare2](https://github.com/radareorg/radare2)
 
