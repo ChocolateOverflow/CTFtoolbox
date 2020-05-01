@@ -94,6 +94,11 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 ### <a name="04c"></a> c. PDF
 
+- [pdfid]
+- [pdfdetach]
+	Part of `poppler`.
+- [pdfparser]
+
 ### <a name="04d"></a>  d. APK
 
 - apktool
@@ -278,11 +283,19 @@ Uses whitespaces to hide data
 
 ### <a name="12a"></a> a. Linux
 
+- [linux-exploit-suggester](https://github.com/mzet-/linux-exploit-suggester)
+
+- [linPEAS](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/blob/master/linPEAS/linpeas.sh)
+
+Scans for possible privesc vectors
+
 ### <a name="12b"></a> b. Windows
 
-Powershell
-
 - [Empire](https://www.powershellempire.com/)
+
+- [winPEAS](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS)
+
+Scans for possible privesc vectors
 
 ---
 
