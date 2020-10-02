@@ -24,6 +24,10 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 	- [Packet Analysis](#packet-analysis)
 * [OSINT](#osint)
 	- [Online Lookup](#online-lookup)
+		+ [People](#people)
+		+ [Domains](#domains)
+		+ [Devices](#devices)
+		+ [Reverse Image Search](#reverse-image-search)
 	- [Social Network Enumeration](#social-network-enumeration)
 * [Passwords](#passwords)
 * [Reverse Engineering/Binary Exploitation](#reverse-engineeringbinary-exploitation)
@@ -63,6 +67,7 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 	- [Payloads](#payloads)
 	- [Wordlists](#wordlists)
 	- [Utilities](#utilities)
+	- [Temporary Endpoints](#temporary-endpoints)
 
 <!-- \TOC -->
 
@@ -88,6 +93,11 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 - [cyberchef](https://gchq.github.io/CyberChef/)
 - [dcode.fr](https://www.dcode.fr/)
 - [BOXENTRIQ](https://www.boxentriq.com/code-breaking)
+- [md5hashing](https://md5hashing.net/)
+- [crackstation](https://crackstation.net/)
+- [Colabcat](https://github.com/someshkar/colabcat)
+- [Penglab](https://github.com/mxrch/penglab)
+- [jwt.io](https://jwt.io/)
 
 ---
 
@@ -176,11 +186,27 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 ### Online Lookup
 
+#### People
+
+- [Spokeo](https://www.spokeo.com/)
+
+#### Domains
+
+- [hunter.io](https://hunter.io/)
+
+#### Devices
+
+- [shodan](https://www.shodan.io/)
+
+#### Reverse Image Search
+
 ### Social Network Enumeration
 
 - [`sherlock`](https://github.com/sherlock-project/sherlock)
 - [`theharvester`](https://github.com/laramies/theHarvester)
 - [`social-mapper`](https://github.com/Greenwolf/social_mapper)
+- [LeetLinked](https://github.com/Sq00ky/LeetLinked)
+- [Whoisleak](https://github.com/0thm4n3/Whoisleak)
 
 ---
 
@@ -410,3 +436,8 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 - [pwncat](https://github.com/calebstewart/pwncat) (Fancy reverse and bind shell handler)
 - [pwncat](https://github.com/cytopia/pwncat) (netcat on steroids with Firewall, IDS/IPS evasion, bind and reverse shell, self-injecting shell and port forwarding magic)
+
+### Temporary Endpoints
+
+- https://beeceptor.com/
+- https://hookbin.com/
