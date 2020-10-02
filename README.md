@@ -1,330 +1,401 @@
 # CTFtoolbox
----
 
-> Tools (checklist) for CTFs
+> Tools (checklist) for CTFs and pentesting
 
 This is an on-going "project" to make a list of tools I use in CTFs. This can also serve as a checklist.
 
 ---
 
-01. [Information Gathering](#01)
-	- [Network Scanners](#01a)
-	- [Vulnerability Scanners](#01b)
-02. [Cryptography](#02)
-03. [Exploit](#03)
-04. [Forensics](#04)
-	- [Binary](#04a)
-	- [Images](#04b)
-	- [PDF](#04c)
-	- [APK](#04d)
-05. [Network](#05)
-	- [Common Ports](#05a)
-	- [Packet Analysis](#05b)
-06. [OSINT](#06)
-	- [Online Lookup](#06a)
-	- [Social Network Enumeration](#06b)
-07. [Passwords](#07)
-08. [Reverse Engineering/Binary Exploitation](#08)
-	- [File Recon](#08a)
-	- [Debugging](#08b)
-	- [Disassembly](#08c)
-	- [Hex](#08d)
-	- [Windows Executables](#08e)
-09. [Steganography](#09)
-	- [Images](#09a)
-	- [Audio](#09b)
-	- [Others](#09c)
-10. [Web](#10)
-	- [Common Files and Directories](#10a)
-	- [Database](#10b)
-	- [Directory Traversal](#10c)
-	- [Proxies](#10d)
-	- [XSS](#10e)
-	- [Wordpress](#10f)
-11. [Wireless](#10)
-	- [Wi-Fi](#11a)
-	- [Bluetooth](#11b)
-	- [RF](#11c)
-12. [Post-exploitation](#12)
-	- [Linux](#12a)
-	- [Windows](#12b)
-13. [Misc](#13)
-	- [Esoteric Languages](#13a)
-	- [File Conversion](#13b)
+<!-- TOC GFM -->
+
+* [Information Gathering](#information-gathering)
+	- [Network Scanners](#network-scanners)
+	- [Vulnerability Scanners](#vulnerability-scanners)
+* [Cryptography](#cryptography)
+* [Forensics](#forensics)
+	- [Binary](#binary)
+	- [Images](#images)
+	- [PDF](#pdf)
+	- [APK](#apk)
+* [Networking](#networking)
+	- [Common Ports & Services](#common-ports--services)
+		+ [Ports](#ports)
+		+ [Services](#services)
+	- [Packet Analysis](#packet-analysis)
+* [OSINT](#osint)
+	- [Online Lookup](#online-lookup)
+	- [Social Network Enumeration](#social-network-enumeration)
+* [Passwords](#passwords)
+* [Reverse Engineering/Binary Exploitation](#reverse-engineeringbinary-exploitation)
+	- [File Recon](#file-recon)
+	- [Debugging](#debugging)
+	- [Disassembly](#disassembly)
+		+ [Binaries](#binaries)
+		+ [Android](#android)
+		+ [iOS](#ios)
+		+ [Java](#java)
+		+ [Windows](#windows)
+	- [Hex](#hex)
+* [Steganograhy](#steganograhy)
+	- [Images](#images-1)
+	- [Audio](#audio)
+	- [Others](#others)
+* [Web](#web)
+	- [Database](#database)
+	- [Directory Traversal](#directory-traversal)
+	- [Proxies](#proxies)
+	- [Firefox extensions](#firefox-extensions)
+	- [Chrome extensions](#chrome-extensions)
+	- [XSS](#xss)
+	- [XXE](#xxe)
+	- [CMS](#cms)
+		+ [Wordpress](#wordpress)
+		+ [Joomla](#joomla)
+* [Wireless](#wireless)
+	- [Wi-Fi](#wi-fi)
+	- [Bluetooth](#bluetooth)
+* [Post-exploitation](#post-exploitation)
+	- [Linux](#linux)
+	- [Windows](#windows-1)
+* [Misc](#misc)
+	- [Esoteric Languages](#esoteric-languages)
+	- [File Conversion](#file-conversion)
+	- [Payloads](#payloads)
+	- [Wordlists](#wordlists)
+	- [Utilities](#utilities)
+
+<!-- \TOC -->
 
 ---
 
-## <a name="01"></a> 01. Information Gathering
+## Information Gathering
 
-### <a name="01a"></a> a. Network Scanners
+### Network Scanners
 
 - [`nmap`](https://nmap.org/)
-
+- [rustscan](https://github.com/RustScan/RustScan)
 - [`ipscan`](https://github.com/angryip/ipscan)
-
 - [`finalrecon`](https://github.com/thewhiteh4t/FinalRecon)
 
-### <a name="01b"></a> b. Vulnerability Scanners
+### Vulnerability Scanners
 
 - [`nikto`](https://sectools.org/tool/nikto/)
 
 ---
 
-## <a name="02"></a> 02. Cryptography
+## Cryptography
 
 - [cyberchef](https://gchq.github.io/CyberChef/)
+- [dcode.fr](https://www.dcode.fr/)
+- [BOXENTRIQ](https://www.boxentriq.com/code-breaking)
 
 ---
 
-## <a name="03"></a> 03. Exploit
+## Forensics
 
----
-
-## <a name="04"></a> 04. Forensics
-
-### <a name="04a"></a> a. Binary
+### Binary
 
 - [`binwalk`](https://github.com/ReFirmLabs/binwalk)
-
 - [`foremost`](http://foremost.sourceforge.net/)
-
 - [`volatility`](https://github.com/volatilityfoundation/volatility)
 
-### <a name="04b"></a> b. Images
+### Images
 
-### <a name="04c"></a> c. PDF
+### PDF
 
-- [pdfid]
-- [pdfdetach]
-	Part of `poppler`.
-- [pdfparser]
+- `pdfdetach` (part of [poppler](https://github.com/freedesktop/poppler))
+- [`pdfparser`](https://blog.didierstevens.com/programs/pdf-tools/)
+- [`pdfid`](https://blog.didierstevens.com/programs/pdf-tools/)
 
-### <a name="04d"></a>  d. APK
+### APK
 
-- apktool
+- [apktool](https://ibotpeaches.github.io/Apktool/)
 
 ---
 
-## <a name="05"></a> 05. Networking
+## Networking
 
-### <a name="05a"></a> a. Common Ports
+### Common Ports & Services
 
-- 80 (http)
+#### Ports
 
-- 443 (https)
+- 21: FTP
+- 22: SSH
+- 53: DNS
+- 80: HTTP
+- 111: NFS
+- 139: SMB
+- 389: LDAP
+- 443: HTTPS
+- 445: SMB
+- 636: LDAPS
+- 1433: MSSQL
+- 2049: NFS
+- 3305: MySql/MariaDB
+- 3389: Windows RDP
+- 5985: WinRM
 
-- 445 (smb)
+#### Services
 
-- 1433 (Microsoft SQL Server)
+- FTP
+	- `ftp SERVER`
+	- anonymous login
+- SSH
+	- `ssh USER@SERVER`
+	- `hydra -L users -P passwords ssh://IP`
+- DNS
+	- `dnsrecon -d DOMAIN [-n NAME_SERVER] -t ENUM_TYPE`
+- NFS
+	- `showmount -e IP`
+- SMB
+	- `crackmapexec smb SERVER`
+	- `smbmap`
+	- `smbclient //SERVER/SHARE --user USER%PASS`
+- LDAP
+	- `crackmapexec ldap SERVER`
+- MySQL/MariaDB
+	- `mysql -h HOST -u USERNAME -p PASSWORD`
+	- `mysqldump -u USERNAME -p --all-databases`
+- RDP
+	- `xfreerdp /v:SERVER /u:USERNAME /p:PASSWORD`
+- WinRM
+	- `crackmapexec winrm SERVER`
+	- `evil-winrm -i IP -u USERNAME [-p PASSWORD | -H NTHASH]`
 
-### <a name="05b"></a> b. Packet Analysis
+### Packet Analysis
 
 - [`wireshark`](https://www.wireshark.org/)
-
 - [`tcpflow`](https://linux.die.net/man/1/tcpflow)
-
 - `tcpdump`
+- [`knock`](https://github.com/grongor/knock)
 
 ---
 
-## <a name="06"></a> 06. OSINT
+## OSINT
 
-### <a name="06a"></a> a. Online Lookup
+### Online Lookup
 
-### <a name="06b"></a> b. Social Network Enumeration
+### Social Network Enumeration
 
-- [sherlock](https://github.com/sherlock-project/sherlock)
-
-Check many websites for usernames
-
-- [theharvester](https://github.com/laramies/theHarvester)
-
-- [social-mapper](https://github.com/Greenwolf/social_mapper)
-
-Enumerate social networks with facial recognition
+- [`sherlock`](https://github.com/sherlock-project/sherlock)
+- [`theharvester`](https://github.com/laramies/theHarvester)
+- [`social-mapper`](https://github.com/Greenwolf/social_mapper)
 
 ---
 
-## <a name="07"></a> 07. Passwords
+## Passwords
 
 - [`john`](https://github.com/magnumripper/JohnTheRipper)
-
 - [`hydra`](https://github.com/vanhauser-thc/thc-hydra)
-
 - [`pdfcrack`](https://github.com/robins/pdfcrack)
-
 - [`fcrackzip`](https://github.com/hyc/fcrackzip)
+- [One Rule To Rule Them All](https://github.com/NotSoSecure/password_cracking_rules/blob/master/OneRuleToRuleThemAll.rule)
+- [SecLists](https://github.com/danielmiessler/SecLists/tree/master/Passwords)
 
 ---
 
-## <a name="08"></a> 08. Reverse Engineering/Binary Exploitation
+## Reverse Engineering/Binary Exploitation
 
-### <a name="08a"></a> a. File Recon
+### File Recon
 
 - `strings`
-
 - `checksec`
-
 - `objdump`
-
-- `rabin2 -z`
-
-Like `strings` but only the `.data` section.
-
+- `rabin2 -z` (part of [radare2](https://www.radare.org/r/))
 - `exiftool`
 
-Extracts metadata.
+### Debugging
 
-### <a name="08b"></a> b. Debugging
-
-- [`gdb`](https://en.wikipedia.org/wiki/GNU_Debugger)
-
+- `gdb`
 - [peda](https://github.com/longld/peda)
+- [pwntools](https://github.com/Gallopsled/pwntools)
 
-An "upgrade" for gdb
+### Disassembly
 
-### <a name="08c"></a> c. Disassembly
+#### Binaries
 
 - [radare2](https://github.com/radareorg/radare2)
-
+- [r2ghidra-dec](https://github.com/radareorg/r2ghidra-dec)
 - [Ghidra](https://ghidra-sre.org/)
 
-### <a name="08d"></a> d. Hex
+#### Android
 
-- `hexdump`
+- [dex2jar](https://github.com/pxb1988/dex2jar)
+- [apktool](https://ibotpeaches.github.io/Apktool/)
 
-### <a name="08e"></a> e. Windows Executables
+#### iOS
+
+#### Java
+
+- [fernflower](https://github.com/fesh0r/fernflower)
+- [jd-gui](https://github.com/java-decompiler/jd-gui)
+
+#### Windows
 
 - [pefile](https://github.com/erocarrera/pefile)
 
+### Hex
+
+- `hexdump`
+- `hexedit`
+
 ---
 
-## <a name="09"></a> 09. Steganograhy
+## Steganograhy
 
-### <a name="09a"></a> a. Images
+### Images
 
 - [stegosuite](https://stegosuite.org/)
-
 - [jstego](https://sourceforge.net/projects/jstego/)
-
 - [stegsolve](http://www.caesum.com/handbook/Stegsolve.jar)
+- [zstag](https://github.com/zed-0xff/zsteg) (only works with PNG & BMP files)
+- [stegsnow](https://github.com/mattkwan-zz/snow) (uses white spaces to hide data in text files)
+- [openstego](https://www.openstego.com/)
+- [outduess](https://www.boxentriq.com/code-breaking/outguess)
+- [stegcracker](https://github.com/Paradoxis/StegCracker)
 
-Uses several filters to help find stego
-
-- [zstag](https://github.com/zed-0xff/zsteg)
-
-Only works with PNG & BMP files
-
-- [snow](https://github.com/mattkwan-zz/snow)
-
-Uses whitespaces to hide data
-
-### <a name="09b"></a> b. Audio
+### Audio
 
 - [Audacity](https://www.audacityteam.org/download/linux/)
+- [sonic-visualiser](https://www.sonicvisualiser.org/)
 
-### <a name="09c"></a> c. Others
+### Others
 
 - [steghide](http://steghide.sourceforge.net/)
 
 ---
 
-## <a name="10"></a> 10. Web
+## Web
 
-### <a name="10a"></a> a. Common Files and Directories
-
-- robots.txt
-- /admin/
-- /.git/
-
-### <a name="10b"></a> b. Database
+### Database
 
 - [`sqlmap`](https://github.com/sqlmapproject/sqlmap)
+- [bbqsql](https://github.com/neohapsis/bbqsql)
+- [sqlninja](http://sqlninja.sourceforge.net/)
 
-### <a name="10c"></a> c. Directory Traversal
+### Directory Traversal
 
 - [dirb](http://dirb.sourceforge.net/)
-
 - [dirbuster](https://sourceforge.net/projects/dirbuster/)
-
+- [dirsearch](https://github.com/maurosoria/dirsearch)
 - [gobuster](https://github.com/OJ/gobuster)
+- [SecLists](https://github.com/danielmiessler/SecLists/tree/master/Discovery/Web-Content)
 
-### <a name="10d"></a> d. Proxies
+### Proxies
 
 - [Burps Suite](https://portswigger.net/burp/communitydownload)
-
 - [zaproxy](https://github.com/zaproxy/zaproxy)
 
-### <a name="10e"></a> e. XSS
+### Firefox extensions
+
+- [shodan.io](https://addons.mozilla.org/en-US/firefox/addon/shodan_io/)
+- [FoxyProxy](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/)
+- [BuiltWith](https://addons.mozilla.org/en-US/firefox/addon/builtwith/)
+- [Wappalyzer](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/)
+- [HackTools](https://addons.mozilla.org/en-US/firefox/addon/hacktools/)
+- [retire.js](https://addons.mozilla.org/en-US/firefox/addon/retire-js/)
+- [Modify Header Value](https://addons.mozilla.org/en-US/firefox/addon/modify-header-value/)
+
+### Chrome extensions
+
+- [shodan.io](https://chrome.google.com/webstore/detail/shodan/jjalcfnidlmpjhdfepjhjbhnhkbgleap)
+- [BuiltWith](https://chrome.google.com/webstore/detail/builtwith/hleikeoncmpohnmdkkagcbppgdecoiak)
+- [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
+- [retire.js](https://chrome.google.com/webstore/detail/retirejs/moibopkbhjceeedibkbkbchbjnkadmom)
+
+### XSS
 
 - [xsstrike](https://github.com/UltimateHackers/XSStrike)
+- [xsser](https://xsser.03c8.net/)
+- [XSS Hunter](https://github.com/mandatoryprogrammer/xsshunter)
 
-### <a name="10f"></a> f. Wordpress
+### XXE
+
+- [XXEinjector](https://github.com/enjoiz/XXEinjector)
+
+### CMS
+
+#### Wordpress
 
 - [`wpscan`](https://wpscan.org/)
 
+#### Joomla
+
+- [joomscan](https://github.com/Ali-Razmjoo/joomscan)
+
 ---
 
-## <a name="11"></a> 11. Wireless
+## Wireless
 
-### <a name="11a"></a> a. Wi-Fi
+### Wi-Fi
 
 - [aircrack-ng](https://www.aircrack-ng.org/)
-
 - [airgeddon](https://github.com/v1s1t0r1sh3r3/airgeddon)
+- [reaver](https://github.com/t6x/reaver-wps-fork-t6x)
+- [pixiewps](https://github.com/wiire-a/pixiewps)
+- [cowpatty](https://github.com/joswr1ght/cowpatty)
+- [kismet](https://www.kismetwireless.net/)
+- [netdiscover](https://github.com/netdiscover-scanner/netdiscover)
 
-### <a name="11b"></a> b. Bluetooth
-
-### <a name="11c"></a> c. RF
+### Bluetooth
 
 ---
 
-## <a name="12"></a> 12. Post-exploitation
+## Post-exploitation
 
-### <a name="12a"></a> a. Linux
+### Linux
 
-- [linux-exploit-suggester](https://github.com/mzet-/linux-exploit-suggester)
-
+- [Linux Exploit Suggester](https://github.com/mzet-/linux-exploit-suggester)
 - [linPEAS](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/blob/master/linPEAS/linpeas.sh)
+- [LinEnum](https://github.com/rebootuser/LinEnum)
 
-Scans for possible privesc vectors
-
-### <a name="12b"></a> b. Windows
-
-- [Empire](https://www.powershellempire.com/)
+### Windows
 
 - [winPEAS](https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS)
-
-Scans for possible privesc vectors
+- [Seatbelt](https://github.com/GhostPack/Seatbelt)
+- [mimikatz](https://github.com/gentilkiwi/mimikatz)
+- [BloodHound](https://github.com/BloodHoundAD/BloodHound)
+- [Empire](https://www.powershellempire.com/)
+- [StarKiller](https://github.com/BC-SECURITY/Starkiller)
+	GUI front-end for PowerShell Empire
+- [Windows Exploit Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
 
 ---
 
-## <a name="13"></a> 13. Misc
+## Misc
 
-### <a name="13a"></a> a. Esoteric Languages
+### Esoteric Languages
 
 - https://tio.run/
 
-This online tool can run many esoteric languages
+	This online tool can run many esoteric languages
 
 - [Brainfuck](https://esolangs.org/wiki/Brainfuck)
-
-Only uses the characters: ` > < + - . , [ ] `
-
+	Only uses the characters: ` > < + - . , [ ] `
 - COW
+	Only uses the following key words: `moo`,`mOo`,`moO`,`mOO`,`Moo`,`MOo`,`MoO`,`MOO`,`OOO`,`MMM`,`OOM`,`oom`
+- [Piet](https://esolangs.org/wiki/Piet)
+	Uses pixels of 20 colors for code. Example "Hello World" code:
+	![`Hello World` in Piet](./img/Piet_Hello_World.gif)
 
-- [Malboge](https://esolangs.org/wiki/Malbolge)
-
-- Ook!
-
-- Piet
-
-### <a name="13b"></a> b. File Conversion
+### File Conversion
 
 - [zbar](https://github.com/ZBar/ZBar)
-
-Scans and decodes QR
-
+	Scans and decodes QR
 - [festival](http://www.cstr.ed.ac.uk/projects/festival/)
+	Text-to-speech converter
+- `https://speech-to-text-demo.ng.bluemix.net/`
+	Speech-to-Text
 
-Text-to-speech converter
+### Payloads
+
+- [Payloads All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)
+
+### Wordlists
+
+- [SecLists](https://github.com/danielmiessler/SecLists)
+
+### Utilities
+
+- [pwncat](https://github.com/calebstewart/pwncat) (Fancy reverse and bind shell handler)
+- [pwncat](https://github.com/cytopia/pwncat) (netcat on steroids with Firewall, IDS/IPS evasion, bind and reverse shell, self-injecting shell and port forwarding magic)
