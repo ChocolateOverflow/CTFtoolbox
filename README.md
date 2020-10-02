@@ -121,6 +121,7 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 - 21: FTP
 - 22: SSH
+- 23: telnet
 - 53: DNS
 - 80: HTTP
 - 111: NFS
@@ -356,8 +357,7 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 - [mimikatz](https://github.com/gentilkiwi/mimikatz)
 - [BloodHound](https://github.com/BloodHoundAD/BloodHound)
 - [Empire](https://www.powershellempire.com/)
-- [StarKiller](https://github.com/BC-SECURITY/Starkiller)
-	GUI front-end for PowerShell Empire
+- [StarKiller](https://github.com/BC-SECURITY/Starkiller) (GUI front-end for PowerShell Empire)
 - [Windows Exploit Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
 
 ---
@@ -371,20 +371,31 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 	This online tool can run many esoteric languages
 
 - [Brainfuck](https://esolangs.org/wiki/Brainfuck)
+
 	Only uses the characters: ` > < + - . , [ ] `
+
 - COW
+
 	Only uses the following key words: `moo`,`mOo`,`moO`,`mOO`,`Moo`,`MOo`,`MoO`,`MOO`,`OOO`,`MMM`,`OOM`,`oom`
+
 - [Piet](https://esolangs.org/wiki/Piet)
+
 	Uses pixels of 20 colors for code. Example "Hello World" code:
+
 	![`Hello World` in Piet](./img/Piet_Hello_World.gif)
 
 ### File Conversion
 
 - [zbar](https://github.com/ZBar/ZBar)
+
 	Scans and decodes QR
+
 - [festival](http://www.cstr.ed.ac.uk/projects/festival/)
+
 	Text-to-speech converter
-- `https://speech-to-text-demo.ng.bluemix.net/`
+
+- https://speech-to-text-demo.ng.bluemix.net/
+
 	Speech-to-Text
 
 ### Payloads
