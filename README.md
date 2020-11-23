@@ -163,6 +163,7 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 	- `smbmap`
 	- `smbclient //SERVER/SHARE --user USER%PASS`
 - LDAP
+	- Is likely a Domain Controller
 	- `crackmapexec ldap SERVER`
 - MySQL/MariaDB
 	- `mysql -h HOST -u USERNAME -p PASSWORD`
@@ -308,6 +309,12 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 - [gobuster](https://github.com/OJ/gobuster)
 - [SecLists](https://github.com/danielmiessler/SecLists/tree/master/Discovery/Web-Content)
 
+### JavaScript De-obfuscation
+
+- [Prettier](https://prettier.io/playground/)
+- [beautifier.io](https://beautifier.io/)
+- [JSNICE](http://www.jsnice.org/)
+
 ### Proxies
 
 - [Burps Suite](https://portswigger.net/burp/communitydownload)
@@ -368,7 +375,7 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 ---
 
-## Post-exploitation
+## Post-exploitation Enumeration & Privilege Escalation
 
 ### Linux
 
@@ -388,6 +395,37 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 
 ---
 
+## Persistence
+
+### Linux
+
+#### Backdoor
+
+- [Password Protected Python Backdoor](https://github.com/Sq00ky/Password-Protected-Python-Backdoor)
+- [The Tick](https://github.com/nccgroup/thetick)
+
+#### TTY
+
+- [SSHPry2.0](https://github.com/nopernik/SSHPry2.0)
+
+	control other people's TTY
+
+- [ttylog](https://github.com/rocasa/ttylog)
+
+	print stdout from `/dev/tty*`
+
+- [conspy](https://www.tecmint.com/use-conspy-to-view-and-control-remote-linux-virtual-consoles/)
+
+	virtual console spy tool
+
+### Windows
+
+#### Backdoor
+
+- [Python Backdoor](https://github.com/xp4xbox/Python-Backdoor)
+
+---
+
 ## Misc
 
 ### Esoteric Languages
@@ -395,6 +433,10 @@ This is an on-going "project" to make a list of tools I use in CTFs. This can al
 - https://tio.run/
 
 	This online tool can run many esoteric languages
+
+- [JSFuck](http://www.jsfuck.com/)
+
+	Only uses the characters: `! [ ] + ( )`
 
 - [Brainfuck](https://esolangs.org/wiki/Brainfuck)
 
